@@ -20,10 +20,6 @@ function startGame()
     console.log("started")
     startButton.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - 0.5) //shuffle questions
-    for (let i = 0; i < shuffledQuestions.length; i++) //shuffle answers
-    {
-        shuffledQuestions[i].answers = shuffledQuestions[i].answers.sort(() => Math.random() - 0.5)
-    }
     questionContainerElement.classList.remove('hide')
     currentQuestionIndex = 0
     answerPicked = false
@@ -115,7 +111,7 @@ function clearStatusClass(element)
     element.classList.remove('wrong')
 }
 
-const questions = [
+let questions = [
     {
         question: '¿En qué año nació el Nono?',
         answers: [
@@ -126,12 +122,12 @@ const questions = [
         ]
     },
     {
-        question: '¿En qué mes se casaron Isabella y Gregory?',
+        question: '¿En qué mes se casaron Isabela y Gregory?',
         answers: [
             { text: 'Octubre', correct: true },
             { text: 'Diciembre', correct: false },
             { text: 'Noviembre', correct: false },
-            { text: '', correct: false }
+            { text: 'Enero', correct: false }
         ]
     },
     {
@@ -139,7 +135,7 @@ const questions = [
         answers: [
             { text: 'tio Jorge', correct: true },
             { text: 'tia Diana', correct: false },
-            { text: 'Nona', correct: false }
+            { text: 'la Nona', correct: false }
         ]
     },
     {
@@ -172,10 +168,10 @@ const questions = [
     {
         question: '¿A dónde fuimos a vacaciones de fin de año en 2019?',
         answers: [
-            { text: '', correct: false },
-            { text: '', correct: false },
-            { text: '', correct: true },
-            { text: '', correct: false }
+            { text: 'Savannah, GA', correct: true },
+            { text: 'St. Augustine, FL', correct: false },
+            { text: 'Charleston, SC', correct: false },
+            { text: 'En casa', correct: false }
         ]
     },
     {
@@ -199,19 +195,19 @@ const questions = [
     {
         question: '¿Qué carrera estudió tio Jorge?',
         answers: [
-            { text: '', correct: false },
-            { text: '', correct: false },
-            { text: '', correct: true },
-            { text: '', correct: false }
+            { text: 'Matemática', correct: false },
+            { text: 'Ingeniería electrónica', correct: true },
+            { text: 'Ingeniería química', correct: false },
+            { text: 'Ingeniería civil', correct: false }
         ]
     },
     {
         question: '¿En qué año se fueron los Zambranos de paseo a Hawaii?',
         answers: [
-            { text: '1996', correct: true },
+            { text: '1999', correct: false },
             { text: '1998', correct: false },
             { text: '2000', correct: false },
-            { text: '1995', correct: false }
+            { text: '1996', correct: true }
         ]
     },
     {
@@ -228,71 +224,70 @@ const questions = [
         answers: [
             { text: 'Coco', correct: false },
             { text: 'Níspero', correct: false },
-            { text: 'Limón', correct: true },
-            { text: 'Aguacate', correct: false }
+            { text: 'Aguacate', correct: false },
+            { text: 'Limón', correct: true }
         ]
     },
     {
         question: '¿Cuántos años tiene Gabriela?',
         answers: [
-            { text: '23', correct: true },
+            { text: '24', correct: false },
             { text: '25', correct: false },
-            { text: '20', correct: false },
+            { text: '23', correct: true },
             { text: '19', correct: false }
         ]
     },
     {
-        question: '¿?',
+        question: '¿Cuántas Veces se ha roto la cabeza Emmanuel?',
         answers: [
-            { text: '', correct: false },
-            { text: '', correct: false },
-            { text: '', correct: true },
-            { text: '', correct: false }
+            { text: '3', correct: true },
+            { text: '2', correct: false },
+            { text: '1', correct: false },
+            { text: '0', correct: false }
         ]
     },
     {
-        question: '¿?',
+        question: '¿Quién NO tenia que quitarse las cordales?',
         answers: [
-            { text: '', correct: false },
-            { text: '', correct: false },
-            { text: '', correct: true },
-            { text: '', correct: false }
+            { text: 'Daniel', correct: false },
+            { text: 'Katrinka', correct: true },
+            { text: 'Alejandra', correct: false },
+            { text: 'Isabela', correct: false }
         ]
     },
     {
-        question: '¿?',
+        question: '¿Quién grita más durante la copa mundiál?',
         answers: [
-            { text: '', correct: false },
-            { text: '', correct: false },
-            { text: '', correct: true },
-            { text: '', correct: false }
+            { text: 'tia Paula', correct: true },
+            { text: 'la Nona', correct: false },
+            { text: 'tio Jorge', correct: false },
+            { text: 'Gabriela', correct: false }
         ]
     },
     {
-        question: '¿?',
+        question: '¿Quién tiene peor memoria que un burro?',
         answers: [
-            { text: '', correct: false },
-            { text: '', correct: false },
-            { text: '', correct: true },
-            { text: '', correct: false }
+            { text: 'Isabela', correct: false },
+            { text: 'Daniel', correct: true },
+            { text: 'Gabriel', correct: false },
+            { text: 'Alejandra', correct: false }
         ]
     },
     {
-        question: '¿?',
+        question: '¿Quién habla más en la familia?',
         answers: [
-            { text: '', correct: false },
-            { text: '', correct: false },
-            { text: '', correct: true },
-            { text: '', correct: false }
+            { text: 'tia Paula', correct: false },
+            { text: 'Gabriela', correct: false },
+            { text: 'tio Jorge', correct: true },
+            { text: 'Emmanuel', correct: false }
         ]
     },
     {
-        question: '¿?',
+        question: '¿Quién se casó primero?',
         answers: [
-            { text: '', correct: false },
-            { text: '', correct: false },
-            { text: '', correct: true },
-            { text: '', correct: false }
+            { text: 'tio Julio', correct: false },
+            { text: 'tio Jorge', correct: false },
+            { text: 'tia Diana', correct: true }
         ]
     }
 ]
