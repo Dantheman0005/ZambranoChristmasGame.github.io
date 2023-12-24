@@ -131,7 +131,7 @@ let questions = [
         ]
     },
     {
-        question: '¿Quien se mudó a los Estado Unidos primero?',
+        question: '¿Quién se mudó a los Estado Unidos primero?',
         answers: [
             { text: 'tio Jorge', correct: true },
             { text: 'tia Diana', correct: false },
@@ -148,7 +148,7 @@ let questions = [
         ]
     },
     {
-        question: '¿A cual universidad estudió Gregory?',
+        question: '¿A cuál universidad estudió Gregory?',
         answers: [
             { text: 'UF', correct: false },
             { text: 'FIU', correct: true },
@@ -157,7 +157,7 @@ let questions = [
         ]
     },
     {
-        question: '¿Cual es nuestra música preferida?',
+        question: '¿Cuál es nuestra música preferida?',
         answers: [
             { text: 'Pop', correct: false },
             { text: 'Rock', correct: false },
